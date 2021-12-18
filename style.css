@@ -1,34 +1,36 @@
-html, body{
-  font-family: Roboto, Arial, Helvetica;
-  background-color: #eee;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.accordion{
-  background: white;
-  border-radius: 2px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+.acordeon{
+  background-color: lightskyblue;
+  padding: 2em;
+  width: 90%;
+  max-width: 120em;
 }
 
-.accordion .item{
-  padding: 7px;
-  /* margin: 2em; */
-  max-height: 2em;
+.acordeon .bloque{
+  background-color: red;
+  margin: 0 0 1em;
+  padding: 1em;
+}
+
+.acordeon h2{
+  background-color: lime;
+  margin: 0 0 1em;
+  padding: 1em;
+}
+
+.acordeon .contenido{
+  background-color: pink;
+  padding: 0em;
+  height: 0;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition: all .5s ease;
 }
-
-.accordion .item.active{
-  max-height: 600px;
-  overflow-y: scroll;
-}
-
-.accordion .item header{
-  min-height: 2em;
-  line-height: 2em;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  padding: 0 0.3em;
-  cursor: pointer;
+.acordeon .bloque.activo .contenido{
+  background-color: pink;
+  height: 4em;
 }
